@@ -2,16 +2,20 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Rise Studio — Ideas with direction.",
-  description: "Rise Studio AI — premium creative strategy, branding and digital design.",
+  title: "Rise Studio AI",
+  description: "Creative Studio",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-black text-white antialiased">
+        {children}
+      </body>
     </html>
   );
 }
